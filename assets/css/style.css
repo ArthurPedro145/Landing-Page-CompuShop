@@ -1,0 +1,350 @@
+body {
+    margin: 0; /*margem do documento*/
+    padding: 0; /*preenchimento do documento*/
+    box-sizing: border-box; /*dimensionamento da caixa*/
+    font-family: 'Open Sans', sans-serif; /*fonte da pagina*/
+    background-color: rgb(39, 69, 151); /*cor de fundo da pagina*/
+}
+
+ul {
+    list-style: none; /*estilo da lista*/
+    padding: 0; /*preenchimento do desordenamento de lista*/
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+main {    /*estava como header*/
+    justify-content: center;    /*alinhamento vertical*/
+    align-items: center;    /*alinhamento horizontal*/
+}
+
+.faixa {
+    width: 99vw; /*largura da imagens*/
+    justify-content: center;
+    display: flex;
+}
+
+.faixa img {
+    width: 100%; /*largura*/
+    height: 140px; /*altura*/
+    height: 30vh;/*altura em view heigth*/
+}
+
+img {
+    width: 70px; /*largura*/
+    height: 70px; /*altura*/
+}
+
+img, h1 {
+    display: inline-block; /*bloco de linhas*/
+}
+
+img, h1 {
+    float: left; /*imagem flutuante lado esquedo superior*/
+}
+
+nav {
+    background-color: #2f6cc7; /*barra de navegação superior*/
+    padding: 0 20px; /*preenchimento*/
+    justify-content: space-between; /*conteudo justificado que deixa um espaço entre eles*/
+    align-items: center;/*alinhamento dos itens centralizados*/
+}
+
+h1 { /*Nome CompuShop*/
+    color: #ffffff; 
+    font-weight: bold; /*Peso da fonte*/
+    font-size: 32px; /*tamanho do nome Setups*/
+}
+
+h1:hover { /*transição sobre os nome CompuShop*/
+    transform: scale(1.15); /*transformação da escala*/
+    transition: all 0.8s; /*transição do item*/
+}
+
+h2 { /*Nome Computadores*/
+    color: #ffffff; /*cor*/
+    font-weight: bold; /*peso da fonte*/
+    font-size: 32px; /*tamanho do nome Setups*/
+    padding: 5px; /*preenchimento*/
+    line-height: 20px; /*altura da linha*/
+}
+
+
+h1,h2:hover { /*transição sobre os nomes computadores e acessorios*/
+    transform: scale(1.1); /*transformação da escala*/
+    transition: all 0.8s; /*transição do item*/
+}
+
+nav a { /*hiperlinks sobre a barra de navegação*/
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0px;
+    line-height: 50px; /*altura da linha*/
+}
+
+nav,
+ul { /*formatação da nav bar*/
+    display: flex; /*exibição flexivel*/
+    flex-direction: row; /*direção flexivel em forma de fileira*/
+}
+
+li { /*determina o formato da lista de itens*/
+    padding: 0 20px; /*preenchimento*/
+    list-style-type: none; /*estilo do tipo de lista*/
+}
+
+.cadastrar { /*area de cadastrar da nav bar*/
+    font-weight: 800; /*peso da fonte*/
+}
+
+li a {/*area de itens da nav bar*/
+    font-weight: 500; /*peso da fonte*/
+}
+
+nav li:hover { /*transição sobre os nomes da nav bar*/
+    transform: scale(1.1); /*transformação da escala*/
+    transition: all 0.8s; /*transição do item*/
+}
+
+h1 { /*definições do nome CompuShop*/
+    margin: 0; /*margem*/
+    padding: 10px; /*preenchimento*/
+}
+
+
+h4 { /*definições sobre o botao comprar*/
+    align-items: center; /*alinhamento de itens*/
+    justify-content: center; /*conteudo justificado*/
+    font-family: 'Open Sans', sans-serif; /*familia de fontes*/
+    border-radius: 0.25rem; /*raio da borda*/
+    display: flex; /*exibição flexivel*/
+    background-color: #2f6cc7; /*cor de fundo*/
+    color: #dcdcdc; /*cor*/
+    cursor:pointer; /*dedo indicador sobre o botão*/
+    width: auto; /*largura*/
+    height: 10%; /*altura*/
+}
+
+h4:hover { /*transição sobre os nomes comprar*/
+    transform: scale(1.1); /*transformação da escala*/
+    transition: all 0.7s; /*transição do item*/
+}
+
+button { /*determina a posição do item botão quando a tela é reduzida abaixo de 700px*/
+    background-color: transparent; /*cor de fundo*/
+    border: none; /*borda*/
+    color: rgb(0, 0, 0); /*cor*/
+    font-size: 28px; /*tamanho da fonte*/
+    position: absolute; /*posição absoluta determina em qual direção o item ficará*/
+    right: 10px; /*posição à direita*/
+    top: 10px; /*posição ao topo*/
+    display: none;/**/
+}
+
+li:hover,
+h1:hover,
+button:hover { 
+    cursor: pointer; /*cursor com dedo indicador*/
+    opacity: 0.8; /*opacidade da nav bar*/
+    background-color: rgba(255, 255, 255, 0.1); /*cor de fundo de cada item da nav bar*/
+}
+
+button:focus~ul { /*determina o tamanho da barra de acesso quando a pagina diminui a baixo de 700px*/
+    height: 350px; /*altura da barra de acesso*/ /*configura visualização dos botões clicaveis*/
+}
+
+p { /*configuração do paragrafo - avaliações*/
+    padding: 10px; /*preenchimento*/
+    line-height: 0; /*altura da linha*/
+}
+
+.secao h2{ /*determinar a centralização dos itens dentro da classe*/
+    text-align: center;
+}
+
+.produtos { /*determina as configurações dos produtos*/
+    display: flex;
+    flex-wrap: wrap; /*quebra a linha flex*/
+    justify-content: space-evenly; /*distribui espaços iguais entre os itens (produto)*/
+    gap: 2rem; /*espaço entre linhas e colunas*/
+    margin-bottom: 10vh; /*margem inferior*/
+}
+
+.produtos a { /*link de compra*/
+    color: #000000;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.produto { /*determina comandos de controle às imagens*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw; /*largura*/
+    height: 63vh; /*altura*/
+    background-color: #ffffff;
+    border-radius: 15px; /*bordas arredondadas*/
+    padding: 5px;
+}
+
+.produto:hover { /*efeito de transição ao passar o mouse por cima*/
+        transform: scale(1.08); /*transformação da escala*/
+        transition: all 0.8s; /*transição do item*/
+}
+
+.produto h3 {
+    font-size: 100%; /*peso da fonte*/
+    font-weight: 100;   /*tamanho da fonte*/
+    text-align: center;
+    /*border: 1px solid red;*/ /*borda de referência*/
+}
+
+.preco {    /*preço antigo (riscado)*/
+    text-decoration: line-through; /*deixa o texto riscado*/
+}
+
+.produto p { /*comanda ações sobre o nome PREÇOS E AVALIAÇÕES*/
+    font-size: 2vh;
+    font-weight: 100;
+    margin: 0;
+}
+
+.estrelas { /*comanda ações sobre as estrelas de classificação*/
+    padding: 5px;
+    align-items: center;
+}
+
+.estrelas img {
+    height: 100%; /*altura*/
+    width: 100px;/*altura*/
+}
+
+.estrelas:hover { /*efeito de transição ao passar o mouse por cima*/
+    transform: scale(1.1); /*transformação da escala*/
+    transition: all 0.6s; /*transição do item*/
+}
+
+.foto { /*configura o formato da a imagem central*/
+    width: 78%;/*largura*/
+    height: 60%; /*altura*/
+    display: flex;
+    justify-content: center;    /*centralizar as imagens*/
+    align-items: center;
+}
+
+.foto:hover {
+    transform: scale(1.05); /*transformação da escala*/
+    transition: all 0.8s; /*transição do item*/
+}
+
+.foto img { /*configura imagens dos produtos a venda*/
+    width: 100%; /*largura*/
+    height: auto; /*altura*/
+}
+
+/*footer {*/
+    /*height: 4rem; /*altura*/
+    /*display: flex; /*tela flexivel*/
+    /*font-size: 1rem; /*tamanho da fonte*/
+    /*font-family: 'Open Sans', sans-serif;
+    /*justify-content: center; /*conteudo justificado*/
+    /*align-items: center; /*alinhamento de itens*/
+   /*color: #ffffff; /*cor*/
+    /*font-weight: bold;*/
+    /*font-size: 12px;*/
+    /*margin-bottom: auto;*/
+/*}*/
+
+.footer {
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
+
+footer {
+    justify-content: space-between;
+    width: 55%;
+    padding-left: 0rem;
+    /*justify-content: center;*/
+    margin-top: 8rem;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    display: inline-flex;
+    height: 9rem;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+footer ul li {
+    justify-content: center;
+    display: flex;
+    width: 14rem;
+    list-style: none;
+    margin-bottom: 0.8rem;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.footer-button button {
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 1.5rem;
+}
+
+.footer-button button a {
+    color: #dcdcdc;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.copyright {
+    color: #dcdcdc;
+    margin-bottom: auto;
+    justify-content: center;
+    display: flex;
+}
+
+
+@media (max-width: 1000px) { /*media para dispositivos móveis*/
+
+    nav,
+    ul { /*redimensiona a nav bar com a unordered list em formato de coluna logo após a redução da tela*/
+        flex-direction: column;
+    }
+
+    ul { /*unordered list - lista desordenada*/
+        text-align: center; /*alinhamento de texto*/
+        margin: 0; /*margem*/
+        height: 0; /*altura*/
+    }
+
+    h1 {
+        margin: 10px;
+        /*padding: 10px;*/
+    }
+
+    nav { /*nav bar*/
+        padding: 0px;
+        align-items: flex-start; /*alinhamento de itens com a nav bar com inicio flexivel*/
+    }
+
+    button { /*controla ações sobre o botão após a redução da tela*/
+        display: flex;
+    }
+
+    li,
+    ul { /*list itens and unordered list*/
+        width: 100%; /*largura*/
+    }
+
+    footer {
+        display: flex;
+    }
+}
